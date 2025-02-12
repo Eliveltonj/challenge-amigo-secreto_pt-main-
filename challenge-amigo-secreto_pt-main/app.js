@@ -5,13 +5,16 @@ let listaAmigos = [];
 function adicionarAmigo() {
     let amigo = document.getElementById('amigo').value.trim();
     
-    if (amigo) {  
-        listaAmigos.push(amigo);  
-        document.getElementById('amigo').value = ''; 
-        
-        atualizarLista(); 
+    if (amigo === '') {  
+        alert("❌ Por favor, insira um nome válido.");
+        return;
     }
+
+    listaAmigos.push(amigo);
+    document.getElementById('amigo').value = ''; 
+    atualizarLista();
 }
+
 
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos');
