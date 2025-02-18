@@ -31,3 +31,15 @@ function atualizarLista() {
 function mostrarLista() {
     alert("Lista final de amigos: " + listaAmigos.join(", "));
 }
+
+// Função para sortear um amigo secreto
+function sortearAmigo() {
+    if (listaAmigos.length === 0) {
+        alert("A lista está vazia! Adicione pelo menos um amigo.");
+        return;
+    }
+
+    let indiceSorteado = Math.floor(Math.random() * listaAmigos.length);
+    let amigoSorteado = listaAmigos[indiceSorteado];
+
+}
