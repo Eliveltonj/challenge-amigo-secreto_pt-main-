@@ -15,7 +15,7 @@ function adicionarAmigo() {
     atualizarLista();
 }
 
-
+// Atualiza a lista exibida na tela
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = ''; 
@@ -27,7 +27,7 @@ function atualizarLista() {
     });
 }
 
-
+// Exibe a lista final de amigos em um alerta
 function mostrarLista() {
     alert("Lista final de amigos: " + listaAmigos.join(", "));
 }
@@ -42,4 +42,11 @@ function sortearAmigo() {
     let indiceSorteado = Math.floor(Math.random() * listaAmigos.length);
     let amigoSorteado = listaAmigos[indiceSorteado];
 
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li>🎉 O amigo secreto sorteado é: <strong>${amigoSorteado}</strong> 🎊</li>`;
+
+    // Limpa a lista exibida na tela após o sorteio
+    document.getElementById('listaAmigos').innerHTML = '';
+
+    listaAmigos = [];
 }
